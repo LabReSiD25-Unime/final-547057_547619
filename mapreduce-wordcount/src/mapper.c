@@ -130,7 +130,7 @@ int main(int argc, char *argv[]) {
 
     fclose(fp);
 
-    /* ===== Invio al Reducer ===== */
+    /* Invio al Reducer */
     snprintf(fifo_path, sizeof(fifo_path), MAPPER_TO_REDUCER_FIFO, mapper_id);
     fifo_fd = open(fifo_path, O_WRONLY);
     if (fifo_fd < 0) {
